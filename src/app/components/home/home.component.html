@@ -1,1 +1,29 @@
-<p>home works!</p>
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select
+        panelClass="sort-select"
+        [(ngModel)]="sort"
+        >
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="released">Released</mat-option>
+            <mat-option value="-added">Added</mat-option>
+            <mat-option value="-created">Created</mat-option>
+            <mat-option value="-updated">Updated</mat-option>
+            <mat-option value="-rating">Rating</mat-option>
+            <mat-option value="metacritic">Metacritic</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="songs">
+    <div class="song">
+        <div class="song-thumb-container thumbnail">
+            <img src="https://images.unsplash.com/photo-1498270379794-d834e67fae35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2010&q=80" alt="thumbnail"
+            class="song-thumbnail">
+        </div>
+        <div class="song-description">
+            <p class="song-name">SONG NAME</p>
+        </div>
+    </div>
+</div>
