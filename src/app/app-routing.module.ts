@@ -8,7 +8,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'search/:Song-search',
+    path: 'search/:Game-search',
     component: HomeComponent
   }
 ];
