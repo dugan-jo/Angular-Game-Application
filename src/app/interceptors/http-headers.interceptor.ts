@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
 @Injectable()
-export class HttpErrorsInterceptor implements HttpInterceptor {
+export class HttpHeadersInterceptor implements HttpInterceptor {
     constructor() {}
 
     intercept(
@@ -12,11 +12,11 @@ export class HttpErrorsInterceptor implements HttpInterceptor {
         ): Observable<HttpEvent<any>> {
         req = req.clone({
             setHeaders: {
+                'X-RapidAPI-key': '1515df32d9msh3b555de18477225p1f9239jsn7c5e5f87845a',
                 'X-RapidAPI-host': 'rawg-video-games-database.p.rapidapi.com',
-                'X-RapidAPI-key': '2f668ec69bmshfed0c48e55d346dp1b96dcjsn6bc85aaa850a',
             },
             setParams: {
-                key: 'ff3039c7307d41c4bd60859e8d75803f'
+                key: '121ab79780a34c30b671561702ae3cfe',
             }
         });
         return next.handle(req);

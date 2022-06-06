@@ -16,9 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './components/home/home.component'
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
-
-
-
+import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,7 +40,7 @@ import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpErrorsInterceptor,
+      useClass: HttpHeadersInterceptor,
       multi: true,
     },
     {
